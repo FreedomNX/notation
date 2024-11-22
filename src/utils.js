@@ -70,7 +70,7 @@ const utils = {
             return keyOrIndex && objProto.hasOwnProperty.call(collection, keyOrIndex);
         }
         if (typeof keyOrIndex === 'number') {
-            return keyOrIndex >= 0 && keyOrIndex < collection.length;
+            return keyOrIndex >= 0 && collection[keyOrIndex] !== undefined
         }
         return false;
     },

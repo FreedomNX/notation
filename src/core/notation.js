@@ -858,7 +858,9 @@ class Notation {
                             return false;
                         }
                         // console.log('  » setting', levelNotation, '=', value);
-                        filtered.set(levelNotation, value, 'overwrite');
+                        if(originalNotation == levelNotation) {
+                            filtered.set(levelNotation, value, 'overwrite');
+                        }
                     }
                 });
             }, reverseIterateIfArray);
